@@ -15,6 +15,11 @@ app.use('/', express.static(__dirname + '/public'));
 var users = [];
 
 /**
+ *  Liste des channels connectés
+ */
+ var channels = [];
+
+/**
  * Historique des messages
  */
 var messages = [];
