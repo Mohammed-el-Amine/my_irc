@@ -68,6 +68,8 @@ section#chat #messages {
     margin: 0;
     padding: 0;
     padding-bottom: 50px;
+    padding-left: 250px;
+
 }
 
 section#chat #messages li {
@@ -171,4 +173,37 @@ section#login button {
     font-size: 20px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+section#chat #channel {
+    display: inline-block;
+    position: fixed;
+    vertical-align: top;
+    overflow: auto;
+    width: 250px;
+    list-style-type: none;
+    height: 100%;
+    padding-bottom: 50px;
+    border-right: 3px solid #eee;
+}
+
+section#chat #channel li.new {
+    background: #e67e22;
+    color: white;
+}
+
+section#chat #channel li {
+    padding: -6px -10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #e67e22;
+    color: black;
+    transition: all 0.5s;
+}
+
+section#chat #channel li span.typing {
+    float: left;
+    font-style: italic;
+    color: #eee;
+    display: none;
 }
