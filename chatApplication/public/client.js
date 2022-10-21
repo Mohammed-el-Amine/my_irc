@@ -18,12 +18,12 @@ function scrollToBottom() {
 
 /**
  * Connexion de l'utilisateur
- * Uniquement si le username n'est pas vide et n'existe pas encore
+ * Uniquement si le username n'existe pas encore
  */
 $('#login form').submit(function (e) {
   e.preventDefault();
   var user = {
-    username : $('#login input').val().trim()
+    username: $('#login input').val().trim()
   };
   if (user.username.length > 0) { // Si le champ de connexion n'est pas vide
     socket.emit('user-login', user, function (success) {
@@ -41,7 +41,7 @@ $('#login form').submit(function (e) {
 $('#chat form').submit(function (e) {
   e.preventDefault();
   var message = {
-    text : $('#m').val()
+    text: $('#m').val()
   };
   $('#m').val('');
   if (message.text.trim().length !== 0) { // Gestion message vide
