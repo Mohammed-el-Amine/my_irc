@@ -117,3 +117,10 @@ socket.on('update-typing', function (typingUsers) {
     $('#users li.' + typingUsers[i].username + ' span.typing').show();
   }
 });
+/**
+ * 
+ * @param {nom du channel} value 
+ */
+function changeChannel(value) {
+  socket.emit('create', value);
+}

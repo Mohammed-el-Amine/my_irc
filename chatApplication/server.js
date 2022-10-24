@@ -17,7 +17,7 @@ var users = [];
 /**
  *  Liste des channels connectés
  */
- var channels = [];
+var channels = [];
 
 /**
  * Historique des messages
@@ -31,6 +31,20 @@ var typingUsers = [];
 
 io.on('connection', function (socket) {
 
+  /**
+   *  Connexion au salon general par défault
+   */
+  socket.join('General');
+  // console.log(socket.rooms);
+
+  /**
+   *  Redirection vers general
+   */
+
+  socket.on('create', (room) => {
+    console.log(room);
+    socket.join(room);
+  })
   /**
    * Utilisateur connecté à la socket
    */
