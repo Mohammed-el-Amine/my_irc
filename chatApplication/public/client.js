@@ -118,9 +118,19 @@ socket.on('update-typing', function (typingUsers) {
   }
 });
 /**
- * 
+ * changement de channel 
  * @param {nom du channel} value 
  */
 function changeChannel(value) {
   socket.emit('create', value);
+}
+
+/**
+ * creation de channel
+ * @param {creation du channel} value 
+ */
+function createChannel(value) {
+  channel = prompt("Merci de donner un nom de channel respectueux : ");
+  socket.emit('create', channel);
+  console.log(value);
 }

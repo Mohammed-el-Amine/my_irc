@@ -34,6 +34,7 @@ io.on('connection', function (socket) {
   /**
    *  Connexion au salon general par défault
    */
+  
   socket.join('General');
   // console.log(socket.rooms);
 
@@ -45,6 +46,7 @@ io.on('connection', function (socket) {
     console.log(room);
     socket.join(room);
   })
+  
   /**
    * Utilisateur connecté à la socket
    */

@@ -13,7 +13,7 @@
     <ul id="channel">
       <br>Pour plus d'information :<br><br><kbd>/</kbd><kbd>h</kbd><kbd>e</kbd><kbd>l</kbd><kbd>p</kbd><kbd>Enter ↵</kbd></li><br>
       <br>Clique ici pour modifier ton pseudo <button>✎</button>
-      <br>Clique ici pour ajouter un channel <button>✚</button>
+      <br>Clique ici pour ajouter un channel <button value="channel" onclick="createChannel(this.value)">✚</button>
       <br><p>&emsp;</p><hr><br>Channels :
       <li class="general"><button value="general" onclick="changeChannel(this.value)">Général</button></li>
     </ul>
@@ -37,9 +37,6 @@
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
-  <script>
-    
-  </script>
 </body>
 
 </html>
