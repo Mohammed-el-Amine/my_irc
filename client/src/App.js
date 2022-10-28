@@ -156,7 +156,7 @@ class App extends Component {
                 tempMessage: {
                     channel: this.state.channelSelected,
                     author: 'system',
-                    content: 'Le channel a bien été créé',
+                    content: `Le channel ${tab[1]} a bien été créé`,
                     to: '',
                     chucho: 'no'
                 }
@@ -268,7 +268,7 @@ class App extends Component {
                 return <span className="msg"><em>{message.author} ta dit </em> : {message.content} <br /></span>
             }
             if (message.to !== '' && message.author === this.state.username) {
-                return <span className="msg"><em> Vous avez chuchoté à {message.to}</em> : {message.content} <br /></span>
+                return <span className="msg"><em> Vous avez écris à {message.to}</em> : {message.content} <br /></span>
             }
             if (message.author !== 'system' && message.chucho === 'no') {
                 return <span className="msg"><strong>{message.author}</strong> : {message.content} <br /></span>
