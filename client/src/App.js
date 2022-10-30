@@ -281,7 +281,7 @@ class App extends Component {
     */
     affichMembers() {
         return this.state.users.map(user => {
-            return <span className="users"> {user} - </span>
+            return <span className="users"> {user} <br /> </span>
         });
     }
 
@@ -294,7 +294,7 @@ class App extends Component {
                 className="chan"
                 value={channel}
                 onClick={(event) => { this.setState({ channelSelected: event.target.getAttribute('value') }) }}>
-                {channel} -&nbsp;
+                {channel} <br />
             </span>
         })
     }
@@ -344,11 +344,14 @@ class App extends Component {
                             <div className="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
                                 <div>
                                     <div id="content">
+                                        Tous les messages du channel : <br />
                                         {this.affichMessage()}
                                         <br />
                                     </div>
                                 </div>
-                                <div className="sendForm">
+                                
+                            </div>
+                            <div className="sendForm grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
                                     <form >
                                         <p>Entrez votre message ✅</p>
                                         <input className="" id="msg" value={this.state.temp} onChange={this.handleChange} />
@@ -356,7 +359,6 @@ class App extends Component {
                                         <button className="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-gray-300 rounded-full shadow ripple waves-light hover:shadow-lg focus:outline-none hover:bg-black" onClick={this.handleMessage}>Envoyer</button>
                                     </form>
                                 </div>
-                            </div>
                         </div>
 
 
