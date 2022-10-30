@@ -325,50 +325,52 @@ class App extends Component {
         }
         if (this.state.username !== '') {
             return (
-                <div className="App">
-                    <div className="flex justify-center py-8">
-                        <div className="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
-                            <div className="rounded text-center relative -mb-px block border  border-grey px-4">
-                                channels <br />
-                                {this.affichChannels()}
-                            </div>
-                            <div className="text-center">
-                                <em>Bienvenue {this.state.username} sur le channel {this.state.channelSelected}</em>
+                <div className="App" style={{ backgroundcolor: "red" }}>
+                    <div className="flex justify-around flex-row" style={{ backgroundcolor: "red" }}>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex justify-center rounded-lg  p-16">
-                        <div className="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
-                            <div>
-                                <div id="content">
-                                    {this.affichMessage()}
-                                    <br />
+                        <div className="w-96 h-12">
+                            <div className="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
+                                <div className="rounded text-center relative -mb-px block border  border-grey px-4">
+                                    channels <br />
+                                    {this.affichChannels()}
+                                </div>
+                                <div className="text-center">
+                                    <em>Bienvenue {this.state.username} sur le channel {this.state.channelSelected}</em>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-
-                    <div className="flex justify-center">
-                        <span className="border rounded-lg">
-                            <div className="sendForm">
-                                <form >
-                                    <input className="" id="msg" value={this.state.temp} onChange={this.handleChange} />
-                                    <button className="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-gray-300 rounded-full shadow ripple waves-light hover:shadow-lg focus:outline-none hover:bg-black" onClick={this.handleMessage}>Envoyer</button>
-                                </form>
-                            </div>
-                        </span>
-                    </div>
-                    <div className="bg-gray-200">
-                        <footer className="flex flex-wrap items-center justify-between p-3 m-auto">
-                            <div className="container mx-auto flex flex-col flex-wrap items-center justify-between">
-                                <div className="members">
-                                    Liste des membres
-                                    {this.affichMembers()}
+                        <div className="w-96 h-12">
+                            <div className="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
+                                <div>
+                                    <div id="content">
+                                        {this.affichMessage()}
+                                        <br />
+                                    </div>
+                                </div>
+                                <div className="sendForm">
+                                    <form >
+                                        <p>Entrez votre message ✅</p>
+                                        <input className="" id="msg" value={this.state.temp} onChange={this.handleChange} />
+                                        <br /><br />
+                                        <button className="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-gray-300 rounded-full shadow ripple waves-light hover:shadow-lg focus:outline-none hover:bg-black" onClick={this.handleMessage}>Envoyer</button>
+                                    </form>
                                 </div>
                             </div>
-                        </footer>
+                        </div>
+
+
+                        <div className="w-96 h-12">
+                            <div className="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-gray-50 border rounded-xl shadow-2xl space-y-5 text-center">
+                                <div className="container mx-auto flex flex-col flex-wrap items-center justify-between">
+                                    <div className="members">
+                                        Liste des membres : <br />
+                                        {this.affichMembers()}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )
