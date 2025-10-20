@@ -4,7 +4,7 @@ Une application de chat IRC moderne et élégante construite avec **Node.js**, *
 
 ## 🎨 Aperçu de l'application
 
-![Épi'Chat Interface](./my-irc.jpg)
+![Épi'Chat Interface](./example.jpg)
 *Interface moderne d'Épi'Chat avec thème sombre, design élégant et fonctionnalités avancées*
 
 ![IRC Chat](https://img.shields.io/badge/Chat-IRC-blue) ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Socket.io](https://img.shields.io/badge/Socket.io-black?logo=socket.io&badgeColor=010101)
